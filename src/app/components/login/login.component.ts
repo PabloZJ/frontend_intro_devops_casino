@@ -18,7 +18,7 @@ import { AuthService } from '../../services/auth.service';
       <form (submit)="ingresar(); $event.preventDefault()">
         <label #field>Usuario
           <input [(ngModel)]="username" name="username" autocomplete="username" required />
-        </label>
+        </label>gi
         <label #field>Contraseña
           <input [(ngModel)]="password" name="password" type="password"
                  autocomplete="current-password" required />

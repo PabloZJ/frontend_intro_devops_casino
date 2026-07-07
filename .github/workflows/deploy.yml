@@ -18,6 +18,11 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
 
+      - name: Instalar dependencias y ejecutar tests
+        run: |
+          npm ci
+          npm test -- --watch=false --browsers=ChromeHeadless
+
       - name: Configurar credenciales AWS
         uses: aws-actions/configure-aws-credentials@v4
         with:
